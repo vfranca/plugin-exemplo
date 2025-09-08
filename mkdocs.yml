@@ -1,0 +1,7 @@
+site_name: plugin-exemplo
+repo_url: https://github.com/vfranca/plugin-exemplo
+theme:
+  name: mkdocs
+nav:
+  - Início: index.md
+  - Contribuindo: contribuindo.md
