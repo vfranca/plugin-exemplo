@@ -3,7 +3,7 @@ repo_url: https://github.com/vfranca/plugin-exemplo
 repo_name: vfranca/plugin-exemplo
 
 theme:
-  name: mkdocs
+  name: readthedocs
   locale: pt_BR
 
 nav:
