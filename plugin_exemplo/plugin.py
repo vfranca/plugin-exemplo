@@ -1,10 +1,12 @@
+"""Comando plugin adiciona plugin ao mtcli."""
+
 import click
 from . import conf
 from mtcli.conecta import conectar, shutdown
 from mtcli.logger import setup_logger
 
 
-logger = setup_logger("plugin")
+log = setup_logger()
 
 
 @click.command()
