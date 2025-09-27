@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.entry-points."mtcli.plugins"]
-plugin = "plugin_exemplo.plugin:plugin"
+plugin_exemplo = "plugin_exemplo.plugin:register"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
