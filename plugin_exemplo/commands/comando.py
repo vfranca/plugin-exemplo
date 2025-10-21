@@ -1,5 +1,8 @@
 import click
-from plugin_exemplo.models.comando_model import calcular
+
+
+def calcular():
+    return "Funcionou!"
 
 
 @click.command("comando")
