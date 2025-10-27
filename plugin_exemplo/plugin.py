@@ -1,5 +1,5 @@
-from plugin_exemplo.commands.comando import comando
+from plugin_exemplo.comando import comando
 
 
 def register(cli):
-    cli.add_command(comando)
+    cli.add_command(comando, name="comando")

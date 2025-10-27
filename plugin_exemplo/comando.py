@@ -5,7 +5,7 @@ def calcular():
     return "Funcionou!"
 
 
-@click.command("comando")
+@click.command()
 @click.version_option(package_name="plugin-exemplo")
 def comando():
     """Ajuda do comando."""
