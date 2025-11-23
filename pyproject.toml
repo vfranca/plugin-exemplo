@@ -47,7 +47,7 @@ select = [
 ignore = ["E501"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["mtcli", "mtcli_volume"]
+known-first-party = ["mtcli", "plugin_exemplo"]
 combine-as-imports = true
 force-sort-within-sections = true
 
