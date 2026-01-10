@@ -1,4 +1,4 @@
-from plugin_exemplo.cli import exemplo
+from .cli import exemplo
 
 
 def register(cli):
