@@ -1,21 +1,51 @@
 [project]
 name = "plugin-exemplo"
 version = "0.1.0"
-description = "Plugin do mtcli"
+description = "Exemplo de plugin mtcli"
 authors = [
-    {name = "Valmir França",email = "vfranca3@gmail.com"}
+    { name = "Valmir França", email = "vfranca3@gmail.com" }
 ]
 readme = "README.md"
-license = "GPL-3.0"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.10,<3.14"
-dependencies = [
-    "mtcli>=3.2.0",
-    "click (>=8.3.0,<9.0.0)",
-    "metatrader5 (>=5.0.5370,<6.0.0)"
+
+keywords = [
+    "trading",
+    "metatrader5",
+    "mt5",
+    "cli",
+    "accessibility",
+    "acessibilidade",
+    "screen reader friendly"
 ]
 
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+dependencies = [
+    "mtcli>=3.5.0",
+    "click>=8.3.0,<9.0.0",
+    "metatrader5>=5.0.5370,<6.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/vfranca/plugin-exemplo"
+Repository = "https://github.com/vfranca/plugin-exemplo"
+Issues = "https://github.com/vfranca/plugin-exemplo/issues"
+Documentation = "https://vfranca.github.io/plugin-exemplo"
+
 [project.entry-points."mtcli.plugins"]
-plugin_exemplo = "plugin_exemplo.plugin:register"
+exemplo = "plugin_exemplo.plugin:register"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -36,14 +66,7 @@ line-length = 88
 target-version = "py311"
 
 [tool.ruff.lint]
-select = [
-  "E",    # Estilo
-  "F",    # Lógica
-  "B",    # Boas práticas
-  "I",    # Imports
-  "UP",   # Upgrade
-  "N",    # Naming
-]
+select = ["E", "F", "B", "I", "UP", "N"]
 ignore = ["E501"]
 
 [tool.ruff.lint.isort]
