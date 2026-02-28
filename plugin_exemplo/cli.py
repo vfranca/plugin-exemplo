@@ -6,15 +6,12 @@ Comando:
 """
 
 import click
-from mtcli.logger import setup_logger
+from mtcli.domain.timeframe import Timeframe
 from .conf import (
     get_default_symbol,
     get_default_timeframe,
     get_default_bars,
 )
-
-log = setup_logger()
-
 
 @click.command("exemplo")
 @click.version_option(package_name="plugin-exemplo")
@@ -29,4 +26,9 @@ def exemplo(symbol, timeframe, bars):
 
         mt exemplo --symbol WIN$N --timeframe m5 --bars 20
     """
+    try:
+        tf_enum = Timeframe.from_string(timeframe)
+    except ValueError as e:
+        raise click.BadParameter(str(e))
+
     click.echo(f"ativo {symbol} timeframe {timeframe} bars {bars}")
