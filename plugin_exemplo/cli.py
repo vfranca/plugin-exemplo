@@ -8,16 +8,16 @@ Comando:
 import click
 from mtcli.domain.timeframe import Timeframe
 from .conf import (
-    get_default_symbol,
-    get_default_timeframe,
-    get_default_bars,
+    SYMBOL,
+    TIMEFRAME,
+    BARS,
 )
 
 @click.command("exemplo")
 @click.version_option(package_name="plugin-exemplo")
-@click.option("-s", "--symbol", default=get_default_symbol(), show_default=True, help="Ativo.")
-@click.option("-t", "--timeframe", default=get_default_timeframe(), show_default=True, help="Timeframe base.")
-@click.option("-b", "--bars", default=get_default_bars(), show_default=True, help="Quantidade de candles base.")
+@click.option("-s", "--symbol", default=SYMBOL, show_default=True, help="Ativo.")
+@click.option("-t", "--timeframe", default=TIMEFRAME, show_default=True, help="Timeframe base.")
+@click.option("-b", "--bars", default=BARS, show_default=True, help="Quantidade de candles base.")
 def exemplo(symbol, timeframe, bars):
     """
     Exibe o comando exemplo no terminal.
